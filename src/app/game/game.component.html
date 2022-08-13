@@ -4,4 +4,13 @@
     <h2>Player {{winner}} won!</h2>
     <h2>Draw!!</h2>
     <button>Start Game</button>
+
+    <main>
+        <app-board 
+            *ngfor="let val of squares; 
+            let i = index" 
+            [value]="val" 
+            (click)="makeMove(i)">
+        </app-board>
+    </main>
 </div>
